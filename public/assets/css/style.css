@@ -108,6 +108,33 @@ body{
     margin-top: 13px;
 }
 
+.escondida.correto p{
+    color: var(--correto);
+    text-decoration-line: line-through;
+}
+
+.escondida.correto ion-icon{
+    color: var(--correto);
+}
+
+.escondida.quase ion-icon{
+    color: var(--quase);
+}
+
+.escondida.incorreto ion-icon{
+    color: var(--incorreto);
+}
+
+.escondida.quase p{
+    color: var(--quase);
+    text-decoration-line: line-through;
+}
+
+.escondida.incorreto p{
+    color: var(--incorreto);
+    text-decoration-line: line-through;
+}
+
 .pergunta ion-icon{
     font-size: 20px;
     color: #333333;
@@ -157,4 +184,71 @@ button.quase{
 
 button.correto{
     background-color: var(--correto);
+}
+
+footer{
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 50px;
+}
+
+footer .concluidos{
+    font-size: 12px;
+    line-height: 14px;
+    color: #333333;
+    text-align: center;
+}
+
+footer .resultados{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer .resultados ion-icon{
+    font-size: 14px;
+}
+
+footer .resultados .correto ion-icon{
+    color: var(--correto);
+}
+
+footer .resultados .quase ion-icon{
+    color: var(--quase);
+}
+
+footer .resultados .incorreto ion-icon{
+    color: var(--incorreto);
+}
+
+.final h3{
+    font-weight: 700;
+    font-size: 12px;
+    color: #333333;
+    text-align: center;
+}
+
+.final .titulo{
+    margin: 14px;
+    display: flex;
+    justify-content: center;
+}
+
+.final .titulo img{
+    margin-right: 7px;
+}
+
+.final p{
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center; 
+    color: #333333;
+}
+
+.final .resultados{
+    margin: 12px 0 14px;
 }

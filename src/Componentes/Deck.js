@@ -1,5 +1,7 @@
+import React from "react";
 import Logo from "./Logo";
-import Card from "./Card"
+import Card from "./Card";
+import Rodape from "./Rodape";
 
 const perguntas = [
     {
@@ -37,13 +39,16 @@ const perguntas = [
 ]
 
 function Deck(){
+    const [concluidas, setConcluidas] = React.useState(0);
+    const [resultados, setResultados] = React.useState([]);
+    
     return(
         <section className="deck">
             <Logo />
             <div className="flashcards">
-                {perguntas.map((pergunta, index) => <Card pergunta={pergunta.pergunta} numero={index+1} resposta={pergunta.resposta} key={index}/>)}
-                
+                {perguntas.map((pergunta, index) => <Card pergunta={pergunta.pergunta} numero={index+1} resposta={pergunta.resposta} key={index} concluidas={concluidas} atualizarConcluidas={setConcluidas} resultados={resultados} atualizarResultados={setResultados} />)}
             </div>
+            <Rodape concluidas={concluidas} resultados={resultados}/>
         </section>
     )
 }

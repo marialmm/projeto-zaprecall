@@ -4,7 +4,7 @@ import PerguntaEscondida from "./PerguntaEscondida";
 import Resposta from "./Resposta";
 
 function Card(props) {
-    const {numero, pergunta, resposta} = props;
+    const {numero, pergunta, resposta, atualizarConcluidas, concluidas, resultados, atualizarResultados} = props;
 
     const [classe, setClasse] = React.useState('escondida');
     const [resultado, setResultado] = React.useState(''); 
@@ -12,7 +12,17 @@ function Card(props) {
     function escolherResultado(resultado){
         setClasse('escondida');
         setResultado(resultado);
-        console.log(resultado);
+        const concluida = concluidas + 1;
+        atualizarConcluidas(concluida);
+        const resultadosAtualizados = [...resultados]
+        if(resultado==='correto'){
+            resultadosAtualizados.push({icone: "checkmark-circle-sharp", classe: 'correto'});
+        } else if(resultado === 'quase'){
+            resultadosAtualizados.push({icone: "help-circle-sharp", classe: 'quase'});
+        } else if(resultado === 'incorreto'){
+            resultadosAtualizados.push({icone: "close-circle-sharp", classe: 'incorreto'});
+        }
+        atualizarResultados(resultadosAtualizados)
     }
 
     if (classe === 'escondida') {
@@ -22,8 +32,6 @@ function Card(props) {
     } else if(classe==='trás'){
         return <Resposta resposta={resposta} escolherResultado={escolherResultado} />
     }
-    
-
 }
 
 export default Card;
