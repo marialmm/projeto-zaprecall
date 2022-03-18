@@ -1,3 +1,9 @@
+:root{
+    --incorreto: #FF3030;
+    --quase: #FF922E;
+    --correto: #2FBE34;
+}
+
 *{
     box-sizing: border-box;
 }
@@ -14,15 +20,19 @@ body{
 
 .logo{
     display: flex;
-    flex-direction: column;
-    /* justify-content: space-evenly; */
     align-items: center;
+}
+
+.logo img{
+    width: 26px;
 }
 
 .logo h1{
     font-family: 'Righteous', cursive;
     color: #FFFFFF;
-    
+    font-size: 20px;
+    line-height: 25px;
+    margin: 0 5px;
 }
 
 .inicio{
@@ -31,6 +41,11 @@ body{
     justify-content:  space-evenly;
     align-items: center;
     flex-direction: column;
+}
+
+.inicio .logo{
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 .inicio .logo img{
@@ -51,4 +66,95 @@ body{
     font-size: 12px;
     line-height: 14px;
     color: #D70900;
+}
+
+.deck{
+    margin-top: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.flashcards{
+    margin-top: 40px;
+    width: 100%;
+}
+
+.pergunta{
+    margin: 5px 10px;
+    padding: 0 8px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
+}
+
+.pergunta.escondida {
+    display: flex;
+    justify-content: space-between;
+    background-color: #FFFFFF;
+    height: 40px;
+    align-content: center;
+    
+}
+
+.pergunta p{
+    color: #333333;
+    font-size: 12px;
+}
+
+.pergunta.escondida p{
+    font-weight: bold;
+    margin-top: 13px;
+}
+
+.pergunta ion-icon{
+    font-size: 20px;
+    color: #333333;
+    margin-top: 11px;
+}
+
+.pergunta.frente,
+.pergunta.tras{
+    height: 80px;
+    background-color: #FFFFD4;
+    padding-top: 13px;
+    position: relative;
+}
+
+.frente img{
+    position: absolute;
+    bottom: 7px;
+    right: 7px;
+    width: 20px;
+}
+
+.botoes{    
+    display: flex;
+    justify-content: space-between;
+    margin-top: 12px;
+}
+
+.tras button{
+    width: 49px;
+    height: 24px;
+    font-size: 7px;
+    line-height: 8px;
+    text-align: center;
+    padding: 0;
+    border: none;
+    border-radius: 5px;
+    color: #FFFFFF;
+}
+
+button.incorreto{
+    background-color: var(--incorreto);
+}
+
+button.quase{
+    background-color: var(--quase);
+}
+
+button.correto{
+    background-color: var(--correto);
 }
