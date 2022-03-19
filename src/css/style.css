@@ -68,6 +68,25 @@ body{
     color: #D70900;
 }
 
+.meta{
+    min-width: 141px;
+    border-radius: 5px;
+    border: none;
+    padding: 7px;
+    font-family: Roboto;
+    color: #FB6B6B;
+    font-size: 12px;
+}
+
+.meta::placeholder{
+    color: #ADADAD;
+    font-size: 9px;
+}
+
+.meta:focus{
+    outline: none;
+}
+
 .deck{
     margin-top: 22px;
     display: flex;

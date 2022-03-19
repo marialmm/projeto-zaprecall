@@ -5,7 +5,7 @@ import Rodape from "./Rodape";
 
 
 function Deck(props){
-    const {concluidas, setConcluidas, resultados, setResultados, reiniciarRecall} = props;
+    const {meta, concluidas, setConcluidas, resultados, setResultados, reiniciarRecall} = props;
     
     const perguntas = [
         {
@@ -55,7 +55,7 @@ function Deck(props){
             <div className="flashcards">
                 {perguntas.map(({pergunta, resposta}, index) => <Card pergunta={pergunta} numero={index+1} resposta={resposta} key={index} concluidas={concluidas} atualizarConcluidas={setConcluidas} resultados={resultados} atualizarResultados={setResultados} />)}
             </div>
-            <Rodape quantidade={qtdPerguntas} concluidas={concluidas} resultados={resultados} reiniciarRecall={reiniciarRecall} />
+            <Rodape quantidade={qtdPerguntas} meta={meta} concluidas={concluidas} resultados={resultados} reiniciarRecall={reiniciarRecall} />
         </section>
     )
 }

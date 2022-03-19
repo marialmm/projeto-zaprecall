@@ -2,7 +2,8 @@ import MensagemFinal from "./MensagemFinal";
 import Resultados from "./Resultados";
 
 function Rodape(props){
-    const {concluidas, resultados, quantidade, reiniciarRecall} = props;
+    const {meta, concluidas, resultados, quantidade, reiniciarRecall} = props;
+    let mensagem = '';
 
     if(concluidas < quantidade){
         return(
@@ -12,10 +13,14 @@ function Rodape(props){
             </footer>
         )
     } else{
-        const final = [];
-        resultados.forEach((resultado) => final.push(resultado.classe));
-        const mensagem = !final.includes('incorreto') ? "parabens" : "putz";
-        
+        if(meta === 0){
+            const final = [];
+            resultados.forEach((resultado) => final.push(resultado.classe));
+            mensagem = !final.includes('incorreto') ? "parabens" : "putz";
+        } else{
+            const zaps = resultados.filter(({classe}) => classe==='correto');
+            mensagem = zaps.length >= meta ? "parabens" : "putz";
+        }
         return(
             <footer className="final">
                 <MensagemFinal tipoMensagem={mensagem} />
