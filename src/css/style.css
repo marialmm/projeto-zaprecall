@@ -143,7 +143,7 @@ body{
 
 .pergunta.frente,
 .pergunta.tras{
-    height: 80px;
+    min-height: 80px;
     background-color: #FFFFD4;
     padding-top: 13px;
     position: relative;
@@ -160,6 +160,7 @@ body{
     display: flex;
     justify-content: space-between;
     margin-top: 12px;
+    padding-bottom: 12px;
 }
 
 .tras button{
@@ -247,8 +248,20 @@ footer .resultados .incorreto ion-icon{
     line-height: 14px;
     text-align: center; 
     color: #333333;
+    padding: 0px 18px;
 }
 
 .final .resultados{
     margin: 12px 0 14px;
+}
+
+.final .reiniciar{
+    min-width: 125px;
+    height: 24px;
+    background-color: #FB6B6B;
+    border-radius: 5px;
+    border: none;
+    color: #FFFFFF;
+    font-size: 10px;
+    margin: 0 37px 12px 41px;
 }

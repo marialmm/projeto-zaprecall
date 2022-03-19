@@ -1,7 +1,9 @@
+import logo from "./../midias/logo.svg";
+
 function Logo(){
     return(
         <div className="logo">
-            <img src="./assets/midias/logo.svg" alt="" />
+            <img src={logo} alt="" />
             <h1>ZapRecall</h1>
         </div>
     )
