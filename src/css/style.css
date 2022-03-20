@@ -8,6 +8,26 @@
   box-sizing: border-box;
 }
 
+/* cores de resultado */
+
+.escondida.correto p,
+.escondida.correto ion-icon,
+footer .resultados .correto ion-icon {
+  color: var(--correto);
+}
+
+.escondida.quase ion-icon,
+.escondida.quase p,
+footer .resultados .quase ion-icon {
+  color: var(--quase);
+}
+
+.escondida.incorreto ion-icon,
+.escondida.incorreto p,
+footer .resultados .incorreto ion-icon {
+    color: var(--incorreto);
+}
+
 body {
   background-color: #fb6b6b;
   font-family: "Recursive", sans-serif;
@@ -24,14 +44,14 @@ body {
 }
 
 .logo img {
-  width: 26px;
+  width: 52px;
 }
 
 .logo h1 {
   font-family: "Righteous", cursive;
   color: #ffffff;
-  font-size: 20px;
-  line-height: 25px;
+  font-size: 36px;
+  line-height: 45px;
   margin: 0 5px;
 }
 
@@ -49,38 +69,39 @@ body {
 }
 
 .inicio .logo img {
-  width: 55px;
+  width: 136px;
 }
 
 .inicio .logo h1 {
-  font-size: 25px;
-  line-height: 31px;
+  font-size: 36px;
+  line-height: 45px;
 }
 
 .inicio button {
-  width: 141px;
-  height: 31px;
+  width: 246px;
+  height: 54px;
   border: 1px solid #d70900;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 5px;
-  font-size: 12px;
+  font-size: 18px;
   line-height: 14px;
   color: #d70900;
 }
 
 .meta {
-  min-width: 141px;
+  min-width: 246px;
+  height: 43px;
   border-radius: 5px;
   border: none;
   padding: 7px;
   font-family: Roboto;
   color: #fb6b6b;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .meta::placeholder {
   color: #adadad;
-  font-size: 9px;
+  font-size: 14px;
 }
 
 .meta:focus,
@@ -89,17 +110,17 @@ body {
 }
 
 .inicio select {
-  min-width: 141px;
-  height: 25px;
+  min-width: 246px;
+  height: 43px;
   border: none;
   border-radius: 5px;
   color: #fb6b6b;
-  font-size: 12px;
+  font-size: 14px;
   font-family: Roboto;
 }
 
 .deck {
-  margin-top: 22px;
+  margin-top: 48px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -108,13 +129,13 @@ body {
 }
 
 .flashcards {
-  margin-top: 40px;
+  margin-top: 58px;
   width: 100%;
 }
 
 .pergunta {
-  margin: 5px 10px;
-  padding: 0 8px;
+  margin: 25px 37px;
+  padding: 0 15px;
   border-radius: 5px;
   box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
 }
@@ -123,80 +144,59 @@ body {
   display: flex;
   justify-content: space-between;
   background-color: #ffffff;
-  height: 40px;
+  height: 65px;
   align-content: center;
 }
 
 .pergunta p {
   color: #333333;
-  font-size: 12px;
+  font-size: 18px;
 }
 
 .pergunta.escondida p {
   font-weight: bold;
-  margin-top: 13px;
+  margin-top: 23px;
 }
 
-.escondida.correto p {
-  color: var(--correto);
-  text-decoration-line: line-through;
-}
-
-.escondida.correto ion-icon {
-  color: var(--correto);
-}
-
-.escondida.quase ion-icon {
-  color: var(--quase);
-}
-
-.escondida.incorreto ion-icon {
-  color: var(--incorreto);
-}
-
-.escondida.quase p {
-  color: var(--quase);
-  text-decoration-line: line-through;
-}
-
-.escondida.incorreto p {
-  color: var(--incorreto);
+.escondida.correto p,
+.escondida.quase p, 
+.escondida.incorreto p{
   text-decoration-line: line-through;
 }
 
 .pergunta ion-icon {
-  font-size: 20px;
+  font-size: 23px;
   color: #333333;
-  margin-top: 11px;
+  margin-top: 20px;
 }
 
 .pergunta.frente,
 .pergunta.tras {
-  min-height: 80px;
+  min-height: 131px;
   background-color: #ffffd4;
-  padding-top: 13px;
+  padding-top: 18px;
   position: relative;
 }
 
 .frente img {
   position: absolute;
   bottom: 7px;
-  right: 7px;
-  width: 20px;
+  right: 15px;
+  width: 30px;
 }
 
 .botoes {
   display: flex;
   justify-content: space-between;
-  margin-top: 12px;
+  margin-top: 25px;
   padding-bottom: 12px;
 }
 
 .tras button {
-  width: 49px;
-  height: 24px;
-  font-size: 7px;
-  line-height: 8px;
+  width: 85px;
+  height: 38px;
+  font-size: 12px;
+  line-height: 14px;
   text-align: center;
   padding: 0;
   border: none;
@@ -223,12 +223,12 @@ footer {
   align-content: center;
   justify-content: center;
   width: 100%;
-  min-height: 50px;
+  min-height: 70px;
 }
 
 footer .concluidos {
-  font-size: 12px;
-  line-height: 14px;
+  font-size: 18px;
+  line-height: 21px;
   color: #333333;
   text-align: center;
 }
@@ -237,44 +237,34 @@ footer .resultados {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 6px;
 }
 
 footer .resultados ion-icon {
-  font-size: 14px;
-}
-
-footer .resultados .correto ion-icon {
-  color: var(--correto);
-}
-
-footer .resultados .quase ion-icon {
-  color: var(--quase);
-}
-
-footer .resultados .incorreto ion-icon {
-  color: var(--incorreto);
+  font-size: 23px;
 }
 
 .final h3 {
   font-weight: 700;
-  font-size: 12px;
+  font-size: 18px;
   color: #333333;
   text-align: center;
 }
 
 .final .titulo {
-  margin: 14px;
+  margin: 16px;
   display: flex;
   justify-content: center;
 }
 
 .final .titulo img {
-  margin-right: 7px;
+  margin-right: 12px;
+  width: 23px;
 }
 
 .final p {
-  font-size: 12px;
-  line-height: 14px;
+  font-size: 18px;
+  line-height: 22px;
   text-align: center;
   color: #333333;
   padding: 0px 18px;
@@ -285,12 +275,87 @@ footer .resultados .incorreto ion-icon {
 }
 
 .final .reiniciar {
-  min-width: 125px;
-  height: 24px;
+  width: 167px;
+  height: 32px;
   background-color: #fb6b6b;
   border-radius: 5px;
   border: none;
   color: #ffffff;
-  font-size: 10px;
-  margin: 0 37px 12px 41px;
+  font-size: 14px;
+  margin: 0 auto 21px;
+}
+
+@media screen and (min-width: 700px) {
+    .logo img{
+        width: 86px;
+    }
+
+    .logo h1 {
+        font-size: 64px;
+        margin: 0 15px;
+    }
+
+    .flashcards {
+        max-width: 570px;
+    }
+
+    .pergunta {
+        padding: 0 24px;
+    }
+
+    .pergunta.escondida{
+        height: 92px;
+    }
+
+    .pergunta p {
+        font-size: 24px;
+    }
+
+    .pergunta.escondida p {
+        margin-top: 28px;
+        line-height: 30px;
+    }
+
+    .pergunta ion-icon{
+        font-size: 32px;
+        margin-top: 27px;
+    }
+
+    .tras button{
+        min-width: 100px;
+        height: 45px;
+        font-size: 18px;
+        padding: 0 5px;
+    }
+
+    footer{
+        min-height: 118px;
+    }
+
+    footer .concluidos {
+        font-size: 32px;
+    }
+
+    footer .resultados ion-icon{
+        font-size: 35px;
+    }
+
+    .final .titulo img {
+        margin-right: 15px;
+        width: 32px;
+    }
+
+    .final h3{
+        font-size: 27px;
+    }
+
+    .final p{
+        font-size: 25px;
+    }
+
+    .final .reiniciar{
+        width: 300px;
+        height: 46px;
+        font-size: 25px;
+    }
 }
