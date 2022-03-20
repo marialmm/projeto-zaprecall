@@ -9,15 +9,18 @@ function App() {
     const [concluidas, setConcluidas] = React.useState(0);
     const [resultados, setResultados] = React.useState([]);
     const [meta, setMeta] = React.useState('');
+    const [deck, setDeck] = React.useState('JSX');
 
     function reiniciarRecall(){
         setVisibilidade(true);
         setConcluidas(0);
         setResultados([]);
         setMeta('');
+        setDeck('JSX');
     }
 
     function mudarVisibilidade(){
+        console.log(deck);
         if(meta > 0 || meta === 0){
             setVisibilidade(false);
         }
@@ -25,7 +28,7 @@ function App() {
 
    return (
        <>
-        {(visibilidade === true) ?  <Inicio visibilidade={visibilidade} mudarVisibilidade={mudarVisibilidade} meta={meta} setMeta={setMeta} /> : <Deck meta={meta} concluidas={concluidas} setConcluidas={setConcluidas} resultados={resultados} setResultados={setResultados} reiniciarRecall={reiniciarRecall} />}
+        {(visibilidade === true) ?  <Inicio visibilidade={visibilidade} mudarVisibilidade={mudarVisibilidade} meta={meta} setMeta={setMeta} deck={deck} setDeck={setDeck} /> : <Deck deck={deck} meta={meta} concluidas={concluidas} setConcluidas={setConcluidas} resultados={resultados} setResultados={setResultados} reiniciarRecall={reiniciarRecall} />}
        </>
     )
 }
