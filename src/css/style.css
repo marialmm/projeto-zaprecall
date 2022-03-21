@@ -55,6 +55,13 @@ body {
   margin: 0 5px;
 }
 
+button:hover,
+select:hover,
+.pergunta.escondida.nenhum ion-icon:hover,
+.frente img{
+  cursor: pointer;
+}
+
 .inicio {
   height: 100%;
   display: flex;

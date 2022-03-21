@@ -7,7 +7,7 @@ function Card(props) {
     const {numero, pergunta, resposta, atualizarConcluidas, concluidas, resultados, atualizarResultados} = props;
 
     const [classe, setClasse] = React.useState('escondida');
-    const [resultado, setResultado] = React.useState(''); 
+    const [resultado, setResultado] = React.useState('nenhum'); 
     
     function escolherResultado(resultado){
         setClasse('escondida');

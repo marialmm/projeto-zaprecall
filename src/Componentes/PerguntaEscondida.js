@@ -4,7 +4,7 @@ function PerguntaEscondida(props){
     const classe = `pergunta escondida ${resultado}`;
     let botao = ''
     
-    if(resultado === ''){
+    if(resultado === 'nenhum'){
         botao = <ion-icon name="play-outline" onClick={virarCarta}></ion-icon>
     } else if(resultado === 'correto') {
         botao = <ion-icon name="checkmark-circle-sharp"></ion-icon>
