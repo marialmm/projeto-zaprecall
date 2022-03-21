@@ -6,14 +6,14 @@ import {decks} from "./../decks";
 
 
 function Deck(props){
-    const {deck, meta, concluidas, setConcluidas, resultados, setResultados, reiniciarRecall} = props;
+    const {perguntas, meta, concluidas, setConcluidas, resultados, setResultados, reiniciarRecall} = props;
     
-    const perguntas = decks[deck];
+    // const perguntas = decks[deck];
 
-    perguntas.sort(comparador);
-    function comparador(){
-        return Math.random() -0.5;
-    }
+    // perguntas.sort(comparador);
+    // function comparador(){
+    //     return Math.random() -0.5;
+    // }
 
     const qtdPerguntas = perguntas.length;
     const classe = concluidas === qtdPerguntas ? 'flashcards final' : 'flashcards';

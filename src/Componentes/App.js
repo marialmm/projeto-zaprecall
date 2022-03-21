@@ -2,6 +2,8 @@ import React from "react";
 
 import Inicio from "./Inicio";
 import Deck from "./Deck";
+import {decks} from "./../decks";
+
 
 
 function App() {
@@ -18,17 +20,24 @@ function App() {
         setMeta('');
         setDeck('JSX');
     }
+    const perguntas = decks[deck]
 
     function mudarVisibilidade(){
-        console.log(deck);
-        if(meta > 0 || meta === 0){
+        if((meta > 0 && meta <= perguntas.length)|| meta === 0){
             setVisibilidade(false);
+            perguntas.sort(comparador);
         }
+    }
+    
+    function comparador(){
+        return Math.random() -0.5;
     }
 
    return (
        <>
-        {(visibilidade === true) ?  <Inicio visibilidade={visibilidade} mudarVisibilidade={mudarVisibilidade} meta={meta} setMeta={setMeta} deck={deck} setDeck={setDeck} /> : <Deck deck={deck} meta={meta} concluidas={concluidas} setConcluidas={setConcluidas} resultados={resultados} setResultados={setResultados} reiniciarRecall={reiniciarRecall} />}
+        {(visibilidade === true) ?  
+        <Inicio visibilidade={visibilidade} mudarVisibilidade={mudarVisibilidade} meta={meta} setMeta={setMeta} deck={deck} setDeck={setDeck} /> : 
+        <Deck perguntas={perguntas} meta={meta} concluidas={concluidas} setConcluidas={setConcluidas} resultados={resultados} setResultados={setResultados} reiniciarRecall={reiniciarRecall} />}
        </>
     )
 }
