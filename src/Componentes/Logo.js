@@ -1,8 +1,9 @@
 import logo from "./../midias/logo.svg";
 
-function Logo(){
+function Logo({className}){
+    const classe = `logo ${className}`
     return(
-        <div className="logo">
+        <div className={classe}>
             <img src={logo} alt="" />
             <h1>ZapRecall</h1>
         </div>

@@ -14,7 +14,7 @@ function Inicio({visibilidade, mudarVisibilidade, meta, setMeta, deck, setDeck})
 
     return (
         <div className="inicio">
-            <Logo />
+            <Logo className="" />
             <select value={deck} onChange={handleSelectChange}>
                 <option value="JSX">JSX</option>
                 <option value="JSX2">JSX2</option>

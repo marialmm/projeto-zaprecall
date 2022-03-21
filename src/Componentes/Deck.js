@@ -16,11 +16,12 @@ function Deck(props){
     }
 
     const qtdPerguntas = perguntas.length;
+    const classe = concluidas === qtdPerguntas ? 'flashcards final' : 'flashcards';
     
     return(
         <section className="deck">
-            <Logo />
-            <div className="flashcards">
+            <Logo className="header"/>
+            <div className={classe}>
                 {perguntas.map(({pergunta, resposta}, index) => <Card pergunta={pergunta} numero={index+1} resposta={resposta} key={index} concluidas={concluidas} atualizarConcluidas={setConcluidas} resultados={resultados} atualizarResultados={setResultados} />)}
             </div>
             <Rodape quantidade={qtdPerguntas} meta={meta} concluidas={concluidas} resultados={resultados} reiniciarRecall={reiniciarRecall} />
