@@ -67,4 +67,4 @@ export const decks = {
             resposta: 'dizer para o React quais informações quando atualizadas devem'
         }
     ]
-}
+};
